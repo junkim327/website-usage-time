@@ -1,0 +1,61 @@
+@import "../../Hourglass.scss";
+
+@keyframes fade_in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+// Timeline and events.
+$min_half_width: max(0.15rem, $border_radius);
+
+// Site.
+.site {
+	padding-bottom: 0.5rem;
+
+	// Site header.
+	.site_header {
+		padding-bottom: 0.5rem;
+		display: flex;
+		justify-content: space-between;
+
+		animation: fade_in 1s;
+
+		// URL.
+		.url{}
+
+		// Time.
+		.time {
+			text-align: right;
+		}
+	}
+
+	// Timeline.
+	.timeline {
+		box-sizing: border-box;
+		border-radius: $border_radius;
+		padding: 0 $min_half_width;
+		height: 1rem;
+		width: 100%;
+
+		// Timeline wrapper.
+		.timeline_wrapper {
+			position: relative;
+			height: 100%;
+
+			// Event.
+			.event {
+				position: absolute;
+				height: 100%;
+				margin-left: -$min_half_width;
+				border-radius: $border_radius;
+				padding: 0 $min_half_width;
+
+				animation: fade_in 1s;
+			}
+		}
+	}
+}
